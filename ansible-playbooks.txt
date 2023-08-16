@@ -1,0 +1,21 @@
+1. copy.yml
+	content to Destination
+2. WithItemsInstallPackage.yaml
+3. WithItemsFileCopy.yaml
+4. WithItemMultiPathFileCopy.yaml
+5.
+
+variables
+	- CountriesList.yaml ::-variables inside the playbook
+      - 
+Tags:-
+  - TagsUserAdd.yaml
+
+when:-
+  - WhenExamples
+
+
+Using setup: ie Gather facts
+0. CustomServiceFacts.yaml ::- print service facts
+1. copy-setup.yml
+2. HostnameFacts.yaml

@@ -1,0 +1,32 @@
+##Features of Ansible
+
+Agentless
+There is no software or agent to be installed on the client that communicates back to the server.
+
+Idempotent
+No matter how many times you call the operation, the result will be the same.
+
+Simple and extensible
+Ansible is written in Python and uses YAML for playbook language, both of which are considered relatively easy to learn.
+
+
+
+
+- name: get url example use
+  hosts: target1
+  tasks:
+    - name: download nginx file
+      get_url:
+        url: http://nginx.org/download/nginx-1.22.0.zip
+        dest: /home/ubuntu/nginx-1.22.0.zip
+
+
+
+- name: unarchive example use
+  hosts: target1
+  tasks:
+    - name: unzipping nginx-1.22.0.zip
+      unarchive:
+        src: /home/ubuntu/nginx-1.22.0.zip
+        dest: /home/ubuntu/
+        remote_src: yes
